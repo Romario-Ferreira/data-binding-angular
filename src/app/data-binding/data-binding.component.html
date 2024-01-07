@@ -1,1 +1,16 @@
-<p>data-binding works!</p>
+<section>
+  <article>
+    <h3> Property Binding e Interpolação</h3>
+    <div>
+      <img src={{ urlImagem }}>
+      <img [src]="urlImagem">
+      <br><br>
+      <p> Resolvendo expressoes com interpolação {{ 1 + 1 + 2 }}</p>
+      <p> Chamando metodos {{ 1 + 1 + getValor() }}</p>
+      <p> Expressoes booleanas {{ (isTrue && getFalse()) }}</p>
+
+    </div>
+
+
+  </article>
+</section>
