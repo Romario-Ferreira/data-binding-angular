@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class DataBindingComponent {
 
+  urlImagem:string = 'http://lorempixel.com.br/400/200';
+  isTrue: boolean = true;
+
+  getValor(){
+    return 2;
+  }
+
+  getFalse(){
+    return false;
+  }
 }
