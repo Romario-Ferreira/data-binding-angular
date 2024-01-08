@@ -1,4 +1,4 @@
-<section>
+<!--section>
   <article>
     <h3> Property Binding e Interpolação</h3>
       <div>
@@ -13,4 +13,35 @@
 
 
   </article>
+</!section-->
+
+<section>
+
+  <article>
+      <h3> Class Binding e Style Binding</h3>
+      <div>Escolha um Alerta</div>
+      <select #meuAlerta (change) ="0">
+          <option value="">-</option>
+          <option value="alert-success">Sucesso</option>
+          <option value="alert-info">Info</option>
+          <option value="alert-warning">Alerta</option>
+          <option value="alert-danger">Erro</option>
+      </select>
+      <br><br>
+
+      <div class="alert {{ meuAlerta.value }}"
+       role="alert">Este Texto muda conforme o Alerta</div>
+      <br>
+
+      <div class="alert " [class.alert-success]="meuAlerta.value == 'alert-success'" role="alert">Sucesso</div>
+      <div class="alert "[class.alert-info]="meuAlerta.value == 'alert-info'" role="alert"> Info</div>
+      <div class="alert "[class.alert-warning]="meuAlerta.value == 'alert-warning'" role="alert"> Alerta</div>
+      <div class="alert "[class.alert-danger]="meuAlerta.value == 'alert-danger'"role="alert"> Erro</div>
+
+      <div class="alert alert-danger"
+      [style.display]="meuAlerta.value == 'alert-danger' ? 'block' : 'none' "
+      role="alert"> Este texto so aparece com alerta de Erro</div>
+
+  </article>
+
 </section>
