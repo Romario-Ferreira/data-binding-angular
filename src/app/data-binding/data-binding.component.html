@@ -69,11 +69,21 @@
     </article>
 </!--section-->
 
-<section class="input-property">
+<!--section class="input-property">
   <article>
     <h5> Input Property</h5>
 
     <app-input-property [nome]="nomeCurso"></app-input-property>
+
+  </article>
+</!--section-->
+
+<section class="output-property">
+  <article>
+    <h3> Output Property </h3>
+
+    <app-output-property (emitFilme)="setNomeFilme($event)"></app-output-property>
+    <p>{{ nomeFilme }}</p>
 
   </article>
 </section>

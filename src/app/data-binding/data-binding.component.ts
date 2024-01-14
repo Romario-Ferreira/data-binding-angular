@@ -13,6 +13,11 @@ export class DataBindingComponent {
   valorSalvo: string ='';
   isMouseOver: boolean = false;
   nomeCurso: string = 'Angular';
+  nomeFilme: string = '';
+
+  setNomeFilme(evento: any){
+    this.nomeFilme = evento.nomeFilme;
+  }
 
   getValor(){
     return 2;
