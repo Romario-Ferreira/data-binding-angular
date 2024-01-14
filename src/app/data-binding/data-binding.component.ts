@@ -14,6 +14,7 @@ export class DataBindingComponent {
   isMouseOver: boolean = false;
   nomeCurso: string = 'Angular';
   nomeFilme: string = '';
+  novoValor: number = 10;
 
   setNomeFilme(evento: any){
     this.nomeFilme = evento.nomeFilme;
@@ -41,5 +42,9 @@ export class DataBindingComponent {
 
   mouseOverOut(){
     this.isMouseOver = !this.isMouseOver;
+  }
+
+  onChangeValue(valor: number){
+    console.log(valor);
   }
 }

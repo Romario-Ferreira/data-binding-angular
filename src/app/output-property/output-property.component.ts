@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-output-property',
@@ -7,12 +7,24 @@ import { Component, EventEmitter, Output } from '@angular/core';
  // outputs: ['emitFilme']
 })
 export class OutputPropertyComponent {
-
+  eventEmitter = new EventEmitter;
+  @Output() emitFilme = this.eventEmitter;
+  @Output() emitValor = this.eventEmitter;
+  @Input() valor: number= 0;
   nomeFilme: string='';
- @Output() emitFilme = new EventEmitter;
 
   setNomeFilme(nomeFilme: string){
     this.nomeFilme = nomeFilme;
     this.emitFilme.emit({nomeFilme:this.nomeFilme});
+  }
+
+  incrementa(){
+    this.valor++;
+    this.emitValor.emit({valor: this.valor})
+  }
+
+  decrementa(){
+    this.valor--;
+    this.emitValor.emit({valor: this.valor})
   }
 }

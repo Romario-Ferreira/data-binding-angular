@@ -81,9 +81,9 @@
 <section class="output-property">
   <article>
     <h3> Output Property </h3>
-
-    <app-output-property (emitFilme)="setNomeFilme($event)"></app-output-property>
-    <p>{{ nomeFilme }}</p>
+    <br><br>
+    <app-output-property #meuOutput [valor]="novoValor"
+    (emitValor)="onChangeValue(meuOutput.valor)"></app-output-property>
 
   </article>
 </section>
